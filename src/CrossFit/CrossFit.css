@@ -1,0 +1,833 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  margin: 0;
+}
+
+.crossfit-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #121212;
+  font-family: "Inter", Arial, sans-serif;
+  background: #ffffff;
+}
+
+.crossfit-page,
+.crossfit-page * {
+  box-sizing: border-box;
+}
+
+.crossfit-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.crossfit-page button,
+.crossfit-page input {
+  font: inherit;
+}
+
+.crossfit-announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 32px;
+  padding: 6px 16px;
+  color: #ffffff;
+  background: #0146ff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.crossfit-announcement strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.crossfit-announcement span {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.crossfit-announcement strong::after,
+.crossfit-section-header a::after,
+.crossfit-article-card a::after,
+.crossfit-faq-card a::after,
+.crossfit-course-row a::after,
+.crossfit-map-link::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.crossfit-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 60px;
+  padding: 0 clamp(16px, 3.5vw, 44px);
+  border-bottom: 1px solid rgba(18, 18, 18, 0.12);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+}
+
+.crossfit-brand {
+  color: #111111;
+  font-size: clamp(1.25rem, 2.6vw, 1.72rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.crossfit-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(10px, 1.6vw, 20px);
+  min-width: 0;
+  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.crossfit-nav > a,
+.crossfit-nav-group > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 60px;
+  white-space: nowrap;
+}
+
+.crossfit-nav-group {
+  position: relative;
+}
+
+.crossfit-nav-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: grid;
+  gap: 8px;
+  width: max-content;
+  min-width: 230px;
+  padding: 16px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  background: #ffffff;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.crossfit-nav-panel a {
+  padding: 9px 8px;
+  color: #2f2f2f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.crossfit-nav-group:hover .crossfit-nav-panel,
+.crossfit-nav-group:focus-within .crossfit-nav-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.crossfit-login {
+  padding: 7px 13px;
+  border: 1px solid #111111;
+}
+
+.crossfit-menu-button {
+  display: none;
+  width: 38px;
+  height: 38px;
+  margin-left: auto;
+  border: 1px solid rgba(18, 18, 18, 0.18);
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.crossfit-menu-button span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: #111111;
+}
+
+.crossfit-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  align-items: end;
+  gap: clamp(24px, 5vw, 80px);
+  min-height: clamp(760px, 82vh, 880px);
+  padding: clamp(24px, 4vw, 56px);
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.52) 38%, rgba(0, 0, 0, 0.05) 100%),
+    url("https://www.crossfit.com/wp-content/uploads/2018/12/05143108/3_2-Hero-5-1600x1052.jpg") center/cover;
+}
+
+.crossfit-hero-overlay {
+  width: min(760px, 100%);
+}
+
+.crossfit-kicker {
+  margin: 0 0 10px;
+  color: #0146ff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.crossfit-hero .crossfit-kicker,
+.crossfit-photo-cta .crossfit-kicker {
+  color: #8ab3ff;
+}
+
+.crossfit-hero h1,
+.crossfit-photo-cta h2 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(2.7rem, 6.6vw, 5.8rem);
+  font-weight: 900;
+  line-height: 0.9;
+}
+
+.crossfit-hero p:not(.crossfit-kicker),
+.crossfit-photo-cta p {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.98rem, 1.6vw, 1.14rem);
+  line-height: 1.48;
+  font-weight: 600;
+}
+
+.crossfit-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.crossfit-button,
+.crossfit-search-form button,
+.crossfit-footer-signup button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.crossfit-button--primary,
+.crossfit-search-form button,
+.crossfit-footer-signup button {
+  color: #ffffff;
+  background: #0146ff;
+}
+
+.crossfit-button--secondary {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.crossfit-gym-search {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 560px) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px clamp(16px, 3.5vw, 44px);
+  border-bottom: 1px solid rgba(18, 18, 18, 0.11);
+  background: #f4f4f4;
+}
+
+.crossfit-gym-search h2,
+.crossfit-section-header h2,
+.crossfit-split-copy h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.4vw, 3.1rem);
+  font-weight: 900;
+  line-height: 0.96;
+}
+
+.crossfit-search-form {
+  display: grid;
+  gap: 7px;
+}
+
+.crossfit-search-form label,
+.crossfit-footer-signup label {
+  color: #5f5f5f;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.crossfit-search-form > div,
+.crossfit-footer-signup form div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.crossfit-search-form input,
+.crossfit-footer-signup input {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid rgba(18, 18, 18, 0.18);
+  padding: 0 14px;
+  color: #111111;
+  background: #ffffff;
+  outline: none;
+}
+
+.crossfit-search-form input:focus,
+.crossfit-footer-signup input:focus {
+  border-color: #0146ff;
+  box-shadow: 0 0 0 3px rgba(1, 70, 255, 0.12);
+}
+
+.crossfit-search-form p {
+  margin: 0;
+  color: #666666;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.crossfit-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0146ff;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.crossfit-section,
+.crossfit-split-section {
+  padding: clamp(36px, 6vw, 72px) clamp(16px, 3.5vw, 44px);
+}
+
+.crossfit-section-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1320px;
+  margin: 0 auto 18px;
+}
+
+.crossfit-section-header a,
+.crossfit-article-card a,
+.crossfit-faq-card a,
+.crossfit-course-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0146ff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.crossfit-article-grid,
+.crossfit-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.crossfit-article-card,
+.crossfit-faq-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 245px;
+  padding: 18px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0)),
+    #ffffff;
+}
+
+.crossfit-article-card {
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72)),
+    url("https://www.crossfit.com/wp-content/uploads/2018/12/05143135/3_2-Hero-4-1024x673.jpg") center/cover;
+}
+
+.crossfit-article-card:nth-child(2) {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.72)),
+    url("https://www.crossfit.com/wp-content/uploads/2018/12/05143122/3_2-Hero-2-1024x673.jpg") center/cover;
+}
+
+.crossfit-article-card:nth-child(3) {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.72)),
+    url("https://www.crossfit.com/wp-content/uploads/2018/12/05143149/3_2-Hero-7-1024x673.jpg") center/cover;
+}
+
+.crossfit-article-card span {
+  width: fit-content;
+  padding: 5px 8px;
+  color: #111111;
+  background: #ffffff;
+  font-size: 0.64rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.crossfit-article-card h3,
+.crossfit-faq-card h3 {
+  margin: auto 0 0;
+  font-size: clamp(1.22rem, 2vw, 1.72rem);
+  line-height: 1;
+}
+
+.crossfit-article-card p,
+.crossfit-faq-card p {
+  margin: 10px 0 16px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.42;
+  font-weight: 600;
+}
+
+.crossfit-article-card a {
+  color: #ffffff;
+}
+
+.crossfit-split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 520px);
+  gap: clamp(22px, 5vw, 56px);
+  align-items: center;
+  color: #ffffff;
+  background: #101820;
+}
+
+.crossfit-split-copy {
+  max-width: 760px;
+}
+
+.crossfit-split-copy p:not(.crossfit-kicker) {
+  max-width: 650px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.crossfit-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.crossfit-stat-grid div {
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.crossfit-stat-grid strong {
+  display: block;
+  color: #6eb4ff;
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  line-height: 0.9;
+}
+
+.crossfit-stat-grid span {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.crossfit-photo-cta {
+  display: grid;
+  align-items: center;
+  min-height: 430px;
+  padding: clamp(38px, 7vw, 76px) clamp(16px, 3.5vw, 44px);
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+}
+
+.crossfit-photo-cta > div {
+  width: min(760px, 100%);
+}
+
+.crossfit-photo-cta--life {
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.28)),
+    url("https://www.crossfit.com/wp-content/uploads/2025/10/06081457/enhance-your-life-in-and-out-of-the-gym-with-crossfit.jpg");
+}
+
+.crossfit-photo-cta--gym {
+  justify-items: center;
+  text-align: center;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.76)),
+    url("https://www.crossfit.com/wp-content/uploads/2023/11/13122323/crossfit-wanderlust-group-class.jpg");
+}
+
+.crossfit-photo-cta--gym > div {
+  display: grid;
+  justify-items: center;
+}
+
+.crossfit-course-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.crossfit-course-row a {
+  justify-content: space-between;
+  min-height: 82px;
+  padding: 15px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 6px;
+  color: #111111;
+  background:
+    linear-gradient(135deg, #ffffff, #eaf1ff);
+  text-transform: none;
+}
+
+.crossfit-course-row span {
+  max-width: 170px;
+  font-size: 0.98rem;
+  line-height: 1.05;
+}
+
+.crossfit-genuin-placement {
+  display: flex;
+  justify-content: center;
+}
+
+.crossfit-genuin-placement .gen-sdk-class {
+  display: block;
+  overflow: hidden;
+}
+
+.crossfit-genuin-placement--hero {
+  justify-self: end;
+  align-self: center;
+  width: 420px;
+  max-width: 100%;
+}
+
+.crossfit-genuin-placement--coaches {
+  width: min(100%, 1320px);
+  margin: 24px auto 0;
+  padding: 18px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 6px;
+  background: #f7f7f7;
+}
+
+.crossfit-faq-card {
+  min-height: 205px;
+  background: #f5f5f5;
+}
+
+.crossfit-faq-card h3 {
+  margin-top: 0;
+}
+
+.crossfit-faq-card p {
+  color: #4b4b4b;
+}
+
+.crossfit-faq-card a {
+  margin-top: auto;
+}
+
+.crossfit-footer {
+  padding: clamp(30px, 5vw, 52px) clamp(16px, 3.5vw, 44px) 22px;
+  border-top: 1px solid rgba(18, 18, 18, 0.12);
+  background: #f2f2f2;
+}
+
+.crossfit-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+  gap: clamp(24px, 4vw, 48px);
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.crossfit-footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.crossfit-footer h3 {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+}
+
+.crossfit-footer-links a {
+  display: block;
+  margin-top: 7px;
+  color: #4b4b4b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.crossfit-footer-signup {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #111111;
+}
+
+.crossfit-footer-signup p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.5;
+}
+
+.crossfit-footer-signup form {
+  display: grid;
+  gap: 7px;
+  margin-top: 6px;
+}
+
+.crossfit-footer-signup label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.crossfit-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 1320px;
+  margin: 28px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(18, 18, 18, 0.12);
+  color: #686868;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.crossfit-footer-bottom p {
+  max-width: 780px;
+  margin: 0;
+}
+
+.crossfit-footer-bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 1120px) {
+  .crossfit-menu-button {
+    display: block;
+  }
+
+  .crossfit-header {
+    min-height: 58px;
+  }
+
+  .crossfit-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    justify-content: start;
+    max-height: calc(100vh - 90px);
+    overflow: auto;
+    padding: 6px 16px 14px;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.12);
+    background: #ffffff;
+  }
+
+  .crossfit-nav--open {
+    display: grid;
+    gap: 0;
+  }
+
+  .crossfit-nav > a,
+  .crossfit-nav-group > a {
+    min-height: auto;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+  }
+
+  .crossfit-nav-panel {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    padding: 0 0 12px 12px;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .crossfit-login {
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .crossfit-gym-search,
+  .crossfit-split-section,
+  .crossfit-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .crossfit-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: auto;
+  }
+
+  .crossfit-genuin-placement--hero {
+    justify-self: center;
+    margin-top: 12px;
+  }
+
+  .crossfit-genuin-placement--coaches .gen-sdk-class {
+    height: 360px !important;
+  }
+
+  .crossfit-stat-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .crossfit-course-row,
+  .crossfit-footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .crossfit-announcement {
+    flex-direction: column;
+    gap: 4px;
+    min-height: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .crossfit-announcement span,
+  .crossfit-announcement strong {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .crossfit-hero {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.84) 100%),
+      url("https://www.crossfit.com/wp-content/uploads/2018/12/05143030/5_4-Hero-2-820x1024.jpg") center/cover;
+  }
+
+  .crossfit-hero h1,
+  .crossfit-photo-cta h2 {
+    font-size: clamp(2.55rem, 13.5vw, 4.4rem);
+  }
+
+  .crossfit-gym-search h2,
+  .crossfit-section-header h2,
+  .crossfit-split-copy h2 {
+    font-size: clamp(1.65rem, 8vw, 2.3rem);
+  }
+
+  .crossfit-article-card h3,
+  .crossfit-faq-card h3 {
+    font-size: 1.14rem;
+  }
+
+  .crossfit-article-card p,
+  .crossfit-faq-card p {
+    font-size: 0.86rem;
+  }
+
+  .crossfit-hero-actions,
+  .crossfit-section-header,
+  .crossfit-footer-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .crossfit-button,
+  .crossfit-search-form button,
+  .crossfit-footer-signup button {
+    width: 100%;
+  }
+
+  .crossfit-search-form > div,
+  .crossfit-footer-signup form div,
+  .crossfit-article-grid,
+  .crossfit-faq-grid,
+  .crossfit-stat-grid,
+  .crossfit-course-row,
+  .crossfit-footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .crossfit-article-card,
+  .crossfit-faq-card {
+    min-height: 220px;
+  }
+
+  .crossfit-photo-cta {
+    min-height: 380px;
+  }
+
+  .crossfit-footer-bottom nav {
+    justify-content: flex-start;
+  }
+}

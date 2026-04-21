@@ -1,5 +1,5 @@
-import BiteRun from "./BiteRun/BiteRun";
+import CrossFit from "./CrossFit/CrossFit";
 
 export default function App() {
-  return <BiteRun />;
+  return <CrossFit />;
 }
