@@ -159,7 +159,7 @@ export default function CrossFit() {
       </a>
 
       <header className="crossfit-header">
-        <a className="crossfit-brand" href="/" aria-label="CrossFit home">
+        <a className="crossfit-brand" href="#/crossfit" aria-label="CrossFit home">
           CrossFit
         </a>
         <button
@@ -196,6 +196,15 @@ export default function CrossFit() {
           <a href="#content">Media</a>
           <a href="#games">Games</a>
           <a href="#store">Store</a>
+          <a className="crossfit-demo-link" href="#/biterun">
+            BiteRun
+          </a>
+          <a className="crossfit-demo-link" href="#/expedia">
+            Expidition
+          </a>
+          <a className="crossfit-demo-link" href="#/costcut">
+            CostCut
+          </a>
           <a className="crossfit-login" href="#account">
             Log In
           </a>

@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.expedia-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #191e3b;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f8fb;
+}
+
+.expedia-page,
+.expedia-page * {
+  box-sizing: border-box;
+}
+
+.expedia-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.expedia-page button,
+.expedia-page input {
+  font: inherit;
+}
+
+.expedia-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 68px;
+  padding: 0 clamp(18px, 5vw, 70px);
+  border-bottom: 1px solid #d7dce8;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+}
+
+.expedia-brand,
+.expedia-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #123c69;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.expedia-brand span,
+.expedia-footer-brand span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #fddb32;
+  box-shadow: inset 0 0 0 7px #123c69;
+  font-size: 0;
+}
+
+.expedia-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(12px, 2vw, 24px);
+  color: #343b53;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.expedia-sign-in {
+  color: #1668e3;
+}
+
+.expedia-hero {
+  position: relative;
+  min-height: 590px;
+  padding: clamp(28px, 6vw, 76px) clamp(18px, 5vw, 70px);
+  background:
+    linear-gradient(180deg, rgba(25, 30, 59, 0.12), rgba(25, 30, 59, 0.62)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=85") center/cover;
+}
+
+.expedia-hero-media {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.expedia-search-card {
+  position: relative;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(22px, 3vw, 34px);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 22px 70px rgba(25, 30, 59, 0.24);
+}
+
+.expedia-search-card h1 {
+  max-width: 720px;
+  margin: 0;
+  color: #191e3b;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.expedia-search-card p {
+  max-width: 680px;
+  margin: 12px 0 22px;
+  color: #4f5872;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.expedia-tabs,
+.expedia-trip-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expedia-tabs {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #d7dce8;
+}
+
+.expedia-tabs button,
+.expedia-trip-switch button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 15px;
+  color: #343b53;
+  background: #eef2f8;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.expedia-tabs button.active,
+.expedia-trip-switch button.active {
+  color: #ffffff;
+  background: #1668e3;
+}
+
+.expedia-search-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.expedia-field-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) minmax(210px, 1fr) minmax(210px, 1fr);
+  gap: 12px;
+}
+
+.expedia-field {
+  display: grid;
+  gap: 6px;
+  color: #4f5872;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.expedia-field input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #b9c2d4;
+  border-radius: 10px;
+  padding: 0 14px;
+  color: #191e3b;
+  background: #ffffff;
+  outline: 0;
+}
+
+.expedia-field input:focus {
+  border-color: #1668e3;
+  box-shadow: 0 0 0 3px rgba(22, 104, 227, 0.14);
+}
+
+.expedia-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #343b53;
+  font-weight: 700;
+}
+
+.expedia-primary-button {
+  justify-self: start;
+  min-height: 46px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 34px;
+  color: #ffffff;
+  background: #1668e3;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.expedia-promo-band,
+.expedia-section,
+.expedia-sdk-section,
+.expedia-rail-layout,
+.expedia-links-section,
+.expedia-footer {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.expedia-promo-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: -34px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #191e3b;
+  box-shadow: 0 18px 54px rgba(25, 30, 59, 0.18);
+}
+
+.expedia-promo-band div {
+  display: grid;
+  gap: 4px;
+}
+
+.expedia-promo-band span,
+.expedia-kicker {
+  color: #9ec6ff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.expedia-promo-band strong {
+  font-size: 1.08rem;
+}
+
+.expedia-promo-band a {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #191e3b;
+  background: #ffffff;
+  font-weight: 900;
+}
+
+.expedia-section,
+.expedia-links-section {
+  padding: clamp(42px, 6vw, 76px) 0 0;
+}
+
+.expedia-section-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.expedia-section-header h2,
+.expedia-links-section h2 {
+  margin: 0;
+  color: #191e3b;
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  line-height: 1;
+}
+
+.expedia-section-header a,
+.expedia-package-card a {
+  color: #1668e3;
+  font-weight: 900;
+}
+
+.expedia-destination-grid,
+.expedia-package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.expedia-destination-card,
+.expedia-package-card {
+  overflow: hidden;
+  border: 1px solid #dce2ee;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(25, 30, 59, 0.08);
+}
+
+.expedia-destination-card img,
+.expedia-package-card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.expedia-destination-card div,
+.expedia-package-card div {
+  padding: 16px;
+}
+
+.expedia-destination-card h3,
+.expedia-package-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.expedia-destination-card p,
+.expedia-package-card p {
+  margin: 8px 0 0;
+  color: #4f5872;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.expedia-sdk-section {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(42px, 6vw, 76px);
+}
+
+.expedia-genuin-placement {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.expedia-genuin-placement--wide {
+  width: 900px;
+}
+
+.expedia-genuin-placement--rail {
+  width: 200px;
+}
+
+.expedia-genuin-placement .gen-sdk-class {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.expedia-rail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 28px;
+  align-items: start;
+}
+
+.expedia-rail-main {
+  min-width: 0;
+}
+
+.expedia-rail-layout .expedia-section,
+.expedia-rail-layout .expedia-links-section {
+  width: 100%;
+  margin: 0;
+}
+
+.expedia-rail-aside {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: clamp(42px, 6vw, 76px);
+}
+
+.expedia-package-card a {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.expedia-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.expedia-link-grid a {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid #dce2ee;
+  border-radius: 12px;
+  background: #ffffff;
+  font-weight: 800;
+}
+
+.expedia-footer {
+  margin-top: clamp(42px, 6vw, 76px);
+  padding: 28px 0;
+  border-top: 1px solid #d7dce8;
+}
+
+.expedia-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.expedia-footer h3 {
+  margin: 0 0 9px;
+}
+
+.expedia-footer a {
+  display: block;
+  margin-top: 7px;
+  color: #4f5872;
+  font-weight: 700;
+}
+
+.expedia-footer p {
+  margin: 22px 0 0;
+  color: #687089;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 980px) {
+  .expedia-header {
+    align-items: start;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .expedia-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .expedia-field-grid,
+  .expedia-destination-grid,
+  .expedia-package-grid,
+  .expedia-rail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .expedia-rail-aside {
+    position: static;
+    justify-content: center;
+    padding-top: clamp(42px, 6vw, 76px);
+  }
+
+  .expedia-link-grid,
+  .expedia-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .expedia-hero {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .expedia-search-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .expedia-search-card h1 {
+    font-size: clamp(2rem, 12vw, 3.1rem);
+  }
+
+  .expedia-promo-band,
+  .expedia-section-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .expedia-promo-band {
+    margin-top: 18px;
+  }
+
+  .expedia-primary-button {
+    width: 100%;
+  }
+
+  .expedia-link-grid,
+  .expedia-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

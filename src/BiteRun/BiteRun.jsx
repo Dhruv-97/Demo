@@ -191,6 +191,9 @@ export default function BiteRun() {
           <a href="#restaurants">Restaurants</a>
           <a href="#offers">Offers</a>
           <a href="#help">Help</a>
+          <a href="#/crossfit">CrossFit</a>
+          <a href="#/expedia">Expidition</a>
+          <a href="#/costcut">CostCut</a>
         </nav>
         <div className="biterun-view-switch" aria-label="Placement view style">
           <span>View style</span>
