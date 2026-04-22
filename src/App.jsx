@@ -3,8 +3,18 @@ import BiteRun from "./BiteRun/BiteRun";
 import CostCut from "./CostCut/CostCut";
 import CrossFit from "./CrossFit/CrossFit";
 import Expedia from "./Expedia/Expedia";
+import People from "./People/People";
+import YamahaMotorsports from "./YamahaMotorsports/YamahaMotorsports";
 
 function getCurrentPage() {
+  if (window.location.hash === "#/people") {
+    return "people";
+  }
+
+  if (window.location.hash === "#/yamaha") {
+    return "yamaha";
+  }
+
   if (window.location.hash.startsWith("#/costcut")) {
     return "costcut";
   }
@@ -17,8 +27,16 @@ function getCurrentPage() {
 }
 
 function getHashPage() {
+  if (window.location.hash === "#/people") {
+    return "people";
+  }
+
   if (window.location.hash === "#/expedia") {
     return "expedia";
+  }
+
+  if (window.location.hash === "#/yamaha") {
+    return "yamaha";
   }
 
   if (window.location.hash.startsWith("#/costcut")) {
@@ -57,7 +75,11 @@ export default function App() {
 
   useEffect(() => {
     document.title =
-      currentPage === "costcut"
+      currentPage === "people"
+        ? "People | Entertainment News"
+        : currentPage === "yamaha"
+        ? "Yamaha Motorsports | Demo"
+        : currentPage === "costcut"
         ? "CostCut | Warehouse Savings"
         : currentPage === "expedia"
         ? "Expidition | Travel Search"
@@ -65,6 +87,14 @@ export default function App() {
           ? "BiteRun | Food Delivery"
           : "CrossFit | The Path to Better Health";
   }, [currentPage]);
+
+  if (currentPage === "people") {
+    return <People />;
+  }
+
+  if (currentPage === "yamaha") {
+    return <YamahaMotorsports />;
+  }
 
   if (currentPage === "costcut") {
     return <CostCut />;

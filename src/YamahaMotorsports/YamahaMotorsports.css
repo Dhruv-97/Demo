@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.yamaha-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #f7f9ff;
+  font-family: "Inter", Arial, sans-serif;
+  background: #080a12;
+}
+
+.yamaha-page,
+.yamaha-page * {
+  box-sizing: border-box;
+}
+
+.yamaha-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.yamaha-page button {
+  font: inherit;
+}
+
+.yamaha-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 74px;
+  padding: 0 clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(8, 10, 18, 0.94);
+  backdrop-filter: blur(18px);
+}
+
+.yamaha-brand,
+.yamaha-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.yamaha-brand span,
+.yamaha-footer-brand span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #123cff;
+  font-size: 1rem;
+}
+
+.yamaha-brand strong {
+  font-size: 1.3rem;
+}
+
+.yamaha-brand em {
+  color: #9aa8ff;
+  font-size: 0.82rem;
+  font-style: normal;
+}
+
+.yamaha-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(12px, 1.8vw, 24px);
+  color: #dce4ff;
+  font-size: 0.82rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.yamaha-nav a:nth-child(5) {
+  color: #ffffff;
+  background: #123cff;
+  padding: 10px 14px;
+  border-radius: 3px;
+}
+
+.yamaha-hero,
+.yamaha-products-layout,
+.yamaha-ride-grid,
+.yamaha-racing,
+.yamaha-accessories,
+.yamaha-footer {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.yamaha-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 28px;
+  align-items: end;
+  min-height: 660px;
+  margin-top: 28px;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 60px);
+  background:
+    linear-gradient(90deg, rgba(8, 10, 18, 0.94), rgba(8, 10, 18, 0.46)),
+    url("https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=2200&q=88") center/cover;
+}
+
+.yamaha-hero::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(130deg, transparent 0 58%, rgba(18, 60, 255, 0.5) 58% 72%, transparent 72%);
+}
+
+.yamaha-hero-copy,
+.yamaha-hero-stat {
+  position: relative;
+  z-index: 1;
+}
+
+.yamaha-hero-copy p,
+.yamaha-section-header p,
+.yamaha-racing p {
+  margin: 0 0 10px;
+  color: #9aa8ff;
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.yamaha-hero-copy h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 7.2rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.yamaha-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.yamaha-hero-actions a,
+.yamaha-machine-card a,
+.yamaha-ride-grid a,
+.yamaha-racing a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 3px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #123cff;
+  font-weight: 900;
+}
+
+.yamaha-hero-actions a:last-child {
+  background: #ffffff;
+  color: #080a12;
+}
+
+.yamaha-hero-stat {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(8, 10, 18, 0.72);
+}
+
+.yamaha-hero-stat span,
+.yamaha-machine-card span {
+  color: #9aa8ff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.yamaha-hero-stat strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.yamaha-hero-stat p {
+  margin: 10px 0 0;
+  color: #dce4ff;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.yamaha-products-layout,
+.yamaha-accessories {
+  padding-top: clamp(46px, 6vw, 82px);
+}
+
+.yamaha-products-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 460px;
+  gap: 28px;
+  align-items: start;
+}
+
+.yamaha-products-main {
+  min-width: 0;
+}
+
+.yamaha-products-aside {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 74px;
+}
+
+.yamaha-section-header {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.yamaha-section-header h2,
+.yamaha-racing h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4.6vw, 4.4rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.yamaha-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.yamaha-category-tabs button {
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+  padding: 0 14px;
+  color: #dce4ff;
+  background: #111526;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.yamaha-category-tabs button.active {
+  color: #ffffff;
+  border-color: #123cff;
+  background: #123cff;
+}
+
+.yamaha-machine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.yamaha-genuin-placement {
+  display: flex;
+  justify-content: center;
+  width: 460px;
+  max-width: 100%;
+}
+
+.yamaha-genuin-placement .gen-sdk-class {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.yamaha-machine-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #111526;
+}
+
+.yamaha-machine-card img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.yamaha-machine-card div {
+  padding: 16px;
+}
+
+.yamaha-machine-card h3 {
+  margin: 8px 0 0;
+  min-height: 58px;
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.yamaha-machine-card p {
+  margin: 10px 0 0;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.yamaha-machine-card a {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.yamaha-ride-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: clamp(46px, 6vw, 82px);
+}
+
+.yamaha-ride-grid article,
+.yamaha-racing {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #111526;
+}
+
+.yamaha-ride-grid article {
+  min-height: 240px;
+  padding: 20px;
+}
+
+.yamaha-ride-grid h3 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.yamaha-ride-grid p {
+  margin: 10px 0 0;
+  color: #aab4d6;
+  line-height: 1.5;
+  font-weight: 650;
+}
+
+.yamaha-racing {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: clamp(46px, 6vw, 82px);
+  padding: clamp(26px, 4vw, 44px);
+  background:
+    linear-gradient(90deg, rgba(8, 10, 18, 0.92), rgba(18, 60, 255, 0.48)),
+    url("https://images.unsplash.com/photo-1515777315835-281b94c9589f?auto=format&fit=crop&w=1800&q=86") center/cover;
+}
+
+.yamaha-racing h2 {
+  max-width: 720px;
+}
+
+.yamaha-racing a {
+  flex: 0 0 auto;
+}
+
+.yamaha-accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.yamaha-accessory-grid a {
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  background: #111526;
+  font-weight: 900;
+}
+
+.yamaha-footer {
+  margin-top: clamp(46px, 6vw, 82px);
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.yamaha-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+  color: #aab4d6;
+  font-weight: 800;
+}
+
+.yamaha-footer p {
+  margin: 22px 0 0;
+  color: #7782a5;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1080px) {
+  .yamaha-header {
+    align-items: start;
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .yamaha-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .yamaha-hero,
+  .yamaha-products-layout,
+  .yamaha-machine-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yamaha-products-aside {
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .yamaha-hero,
+  .yamaha-products-layout,
+  .yamaha-machine-grid,
+  .yamaha-ride-grid,
+  .yamaha-accessory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yamaha-hero {
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .yamaha-hero-copy h1 {
+    font-size: clamp(2.35rem, 12vw, 3.35rem);
+    line-height: 0.96;
+  }
+
+  .yamaha-genuin-placement .gen-sdk-class {
+    width: 100% !important;
+  }
+
+  .yamaha-racing {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .yamaha-racing a {
+    width: 100%;
+  }
+}

@@ -100,31 +100,31 @@ const footerGroups = [
   },
 ];
 
-const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
+const genuinApiKey = "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d";
 
 const genuinPlacements = {
   versionATrending: {
     ariaLabel: "CostCut trending products",
     containerId: "gen-sdk-costcut-version-a-trending",
     height: "300px",
-    placement_id: "69e81f4c4f981f9247b556ea",
-    style_id: "69e81f4c4f981f9247b556eb",
+    placement_id: "69e86c6fb7908587274a8f43",
+    style_id: "69e86c6fb7908587274a8f44",
     width: "1180px",
   },
   versionAFavorites: {
     ariaLabel: "CostCut member stories",
     containerId: "gen-sdk-costcut-version-a",
     height: "300px",
-    placement_id: "69e7ac88e5a28ab56aac6216",
-    style_id: "69e7ac88e5a28ab56aac6217",
+    placement_id: "69e86c6fb7908587274a8f43",
+    style_id: "69e86c6fb7908587274a8f44",
     width: "1180px",
   },
   versionBIntro: {
     ariaLabel: "CostCut featured products",
     containerId: "gen-sdk-costcut-version-b-intro",
     height: "700px",
-    placement_id: "69e8258c4f981f9247b5577b",
-    style_id: "69e8258c4f981f9247b5577c",
+    placement_id: "69e86b434f981f9247b56ca8",
+    style_id: "69e86b434f981f9247b56ca9",
     width: "250px",
   },
 };
@@ -254,6 +254,8 @@ export default function CostCut() {
           <a href="#/crossfit">CrossFit</a>
           <a href="#/biterun">BiteRun</a>
           <a href="#/expedia">Expidition</a>
+          <a href="#/yamaha">Yamaha</a>
+          <a href="#/people">People</a>
           <a href="#account">Sign In</a>
         </nav>
         <div className="costcut-version-switch" aria-label="SDK placement version">

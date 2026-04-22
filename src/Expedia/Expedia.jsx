@@ -219,6 +219,8 @@ export default function Expedia() {
           <a href="#/crossfit">CrossFit</a>
           <a href="#/biterun">BiteRun</a>
           <a href="#/costcut">CostCut</a>
+          <a href="#/yamaha">Yamaha</a>
+          <a href="#/people">People</a>
           <a href="#property">List your property</a>
           <a href="#support">Support</a>
           <a href="#trips">Trips</a>

@@ -103,12 +103,12 @@ const filters = [
 
 const genuinPlacements = {
   rail: {
-    style_id: "69e6e20fe5a28ab56aabff67",
-    placement_id: "69e6e20fe5a28ab56aabff66",
+    style_id: "69e3e87e13580a0000207a4c",
+    placement_id: "69e3e87e13580a0000207a4b",
   },
   inline: {
-    style_id: "69e6e78cb79085872749ffe5",
-    placement_id: "69e6e78cb79085872749ffe4",
+    style_id: "69e85de04f981f9247b5615f",
+    placement_id: "69e85de04f981f9247b5615e",
   },
 };
 
@@ -118,7 +118,7 @@ function getGenuinConfig(viewStyle) {
   return {
     style_id: placement.style_id,
     placement_id: placement.placement_id,
-    api_key: "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1",
+    api_key: "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d",
   };
 }
 
@@ -194,6 +194,8 @@ export default function BiteRun() {
           <a href="#/crossfit">CrossFit</a>
           <a href="#/expedia">Expidition</a>
           <a href="#/costcut">CostCut</a>
+          <a href="#/yamaha">Yamaha</a>
+          <a href="#/people">People</a>
         </nav>
         <div className="biterun-view-switch" aria-label="Placement view style">
           <span>View style</span>

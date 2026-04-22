@@ -75,18 +75,18 @@ const footerColumns = [
   },
 ];
 
-const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
+const genuinApiKey = "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d";
 
 const genuinPlacements = {
   hero: {
     containerId: "gen-sdk-hero",
-    styleId: "69e7426eb7908587274a2ee0",
-    placementId: "69e7426eb7908587274a2edf",
+    styleId: "69e86479c389e59d070a9e8a",
+    placementId: "69e86479c389e59d070a9e89",
   },
   coaches: {
     containerId: "gen-sdk-coaches",
-    styleId: "69e73d69e5a28ab56aac2bbc",
-    placementId: "69e73d69e5a28ab56aac2bbb",
+    styleId: "69e86378e5a28ab56aac8863",
+    placementId: "69e86378e5a28ab56aac8862",
   },
 };
 
@@ -204,6 +204,12 @@ export default function CrossFit() {
           </a>
           <a className="crossfit-demo-link" href="#/costcut">
             CostCut
+          </a>
+          <a className="crossfit-demo-link" href="#/yamaha">
+            Yamaha
+          </a>
+          <a className="crossfit-demo-link" href="#/people">
+            People
           </a>
           <a className="crossfit-login" href="#account">
             Log In
