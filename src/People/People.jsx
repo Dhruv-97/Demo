@@ -58,23 +58,26 @@ const photoStories = [
   },
 ];
 
-const shoppingCards = [
-  "Editor-loved white sneakers under $100",
-  "The linen pieces that make packing simpler",
-  "Small kitchen upgrades with a big daily payoff",
-  "A weekend bag that actually fits the extras",
+const genuinApiKey = "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d";
+
+const genuinPlacements = [
+  {
+    ariaLabel: "People editor picks videos",
+    containerId: "gen-sdk-people-editors-picks",
+    height: "820px",
+    placement_id: "69e8ce63b7908587274ad106",
+    style_id: "69e8ce63b7908587274ad107",
+    width: "100%",
+  },
+  {
+    ariaLabel: "People shopping videos",
+    containerId: "gen-sdk-people-shopping",
+    height: "820px",
+    placement_id: "69e8d009c389e59d070aee74",
+    style_id: "69e8d009c389e59d070aee75",
+    width: "100%",
+  },
 ];
-
-const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
-
-const genuinPlacement = {
-  ariaLabel: "People editor picks videos",
-  containerId: "gen-sdk",
-  height: "650px",
-  placement_id: "69e84b85b7908587274a7e34",
-  style_id: "69e84b85b7908587274a7e35",
-  width: "100%",
-};
 
 function PeopleGenuinPlacement({ placement }) {
   useEffect(() => {
@@ -231,18 +234,12 @@ export default function People() {
               <p>Editors' picks</p>
               <h2>Stories with staying power</h2>
             </div>
-            <PeopleGenuinPlacement placement={genuinPlacement} />
+            <div className="people-genuin-grid">
+              {genuinPlacements.map((placement) => (
+                <PeopleGenuinPlacement key={placement.containerId} placement={placement} />
+              ))}
+            </div>
           </div>
-
-          <aside className="people-shopping" aria-labelledby="shopping-title">
-            <p>Shopping</p>
-            <h2 id="shopping-title">People tested</h2>
-            {shoppingCards.map((item) => (
-              <a href="#shopping" key={item}>
-                {item}
-              </a>
-            ))}
-          </aside>
         </section>
       </main>
 
