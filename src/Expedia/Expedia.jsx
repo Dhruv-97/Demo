@@ -3,26 +3,44 @@ import "./Expedia.css";
 
 const tabs = ["Stays", "Flights", "Cars", "Packages", "Things to do", "Cruises"];
 
-const destinationIdeas = [
+const destinationPlacements = [
   {
-    city: "Cancun",
-    detail: "Beach resorts with flight + hotel savings",
-    image:
-      "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=900&q=80",
+    ariaLabel: "Established destinations videos",
+    containerId: "gen-sdk-expedia-established-destinations",
+    height: "380px",
+		style_id: '69e8bca1779dc52c5fc9f6e6',
+		placement_id: '69e8bca1779dc52c5fc9f6e5',
+    title: "Established destinations",
+    width: "100%",
   },
   {
-    city: "New York",
-    detail: "Weekend hotels near the city buzz",
-    image:
-      "https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?auto=format&fit=crop&w=900&q=80",
+    ariaLabel: "Trending spots videos",
+    containerId: "gen-sdk-expedia-trending-spots",
+    height: "380px",
+    placement_id: "69e8c247b7908587274ac6c7",
+    style_id: "69e8c247b7908587274ac6c8",
+    title: "Trending spots",
+    width: "100%",
   },
   {
-    city: "Paris",
-    detail: "Romantic stays and flexible flights",
-    image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80",
+    ariaLabel: "Unknown locations videos",
+    containerId: "gen-sdk-expedia-unknown-locations",
+    height: "380px",
+    placement_id: "69e8c2a5779dc52c5fc9fa41",
+    style_id: "69e8c2a5779dc52c5fc9fa42",
+    title: "Unknown locations",
+    width: "100%",
   },
 ];
+
+const wideGenuinPlacement = {
+  ariaLabel: "Traveler stories",
+  containerId: "gen-sdk",
+  height: "325px",
+	style_id: '69e8ca02c389e59d070aeb75',
+	placement_id: '69e8ca02c389e59d070aeb74',
+  width: "100%",
+};
 
 const packageCards = [
   {
@@ -71,26 +89,7 @@ const footerGroups = [
   },
 ];
 
-const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
-
-const genuinPlacements = {
-  wide: {
-    ariaLabel: "Traveler stories",
-    containerId: "gen-sdk",
-    height: "325px",
-    placement_id: "69e798334f981f9247b537c4",
-    style_id: "69e798334f981f9247b537c5",
-    width: "900px",
-  },
-  rail: {
-    ariaLabel: "Featured travel stories",
-    containerId: "gen-sdk-expedia-rail",
-    height: "750px",
-    placement_id: "69e79e624f981f9247b53a5a",
-    style_id: "69e79e624f981f9247b53a5b",
-    width: "200px",
-  },
-};
+const genuinApiKey = "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d";
 
 function ExpediaGenuinPlacement({ className = "", placement }) {
   useEffect(() => {
@@ -273,13 +272,16 @@ export default function Expedia() {
             <a href="#deals">Explore deals</a>
           </div>
           <div className="expedia-destination-grid">
-            {destinationIdeas.map((destination) => (
-              <article className="expedia-destination-card" key={destination.city}>
-                <img src={destination.image} alt="" />
-                <div>
-                  <h3>{destination.city}</h3>
-                  <p>{destination.detail}</p>
-                </div>
+            {destinationPlacements.map((placement) => (
+              <article
+                className="expedia-destination-card expedia-destination-card--sdk"
+                key={placement.containerId}
+              >
+                <h3>{placement.title}</h3>
+                <ExpediaGenuinPlacement
+                  className="expedia-genuin-placement--destination"
+                  placement={placement}
+                />
               </article>
             ))}
           </div>
@@ -288,49 +290,39 @@ export default function Expedia() {
         <section className="expedia-sdk-section">
           <ExpediaGenuinPlacement
             className="expedia-genuin-placement--wide"
-            placement={genuinPlacements.wide}
+            placement={wideGenuinPlacement}
           />
         </section>
 
-        <div className="expedia-rail-layout">
-          <div className="expedia-rail-main">
-            <section className="expedia-section" aria-labelledby="package-title">
-              <div className="expedia-section-header">
-                <h2 id="package-title">More ways to get away</h2>
-                <a href="#packages">View packages</a>
-              </div>
-              <div className="expedia-package-grid">
-                {packageCards.map((card) => (
-                  <article className="expedia-package-card" key={card.title}>
-                    <img src={card.image} alt="" />
-                    <div>
-                      <h3>{card.title}</h3>
-                      <p>{card.text}</p>
-                      <a href="#packages">Plan a trip</a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="expedia-links-section" aria-labelledby="links-title">
-              <h2 id="links-title">Explore stays and travel</h2>
-              <div className="expedia-link-grid">
-                {quickLinks.map((link) => (
-                  <a href="#shop" key={link}>
-                    {link}
-                  </a>
-                ))}
-              </div>
-            </section>
+        <section className="expedia-section" aria-labelledby="package-title">
+          <div className="expedia-section-header">
+            <h2 id="package-title">More ways to get away</h2>
+            <a href="#packages">View packages</a>
           </div>
-          <aside className="expedia-rail-aside" aria-label="Featured travel stories">
-            <ExpediaGenuinPlacement
-              className="expedia-genuin-placement--rail"
-              placement={genuinPlacements.rail}
-            />
-          </aside>
-        </div>
+          <div className="expedia-package-grid">
+            {packageCards.map((card) => (
+              <article className="expedia-package-card" key={card.title}>
+                <img src={card.image} alt="" />
+                <div>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                  <a href="#packages">Plan a trip</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="expedia-links-section" aria-labelledby="links-title">
+          <h2 id="links-title">Explore stays and travel</h2>
+          <div className="expedia-link-grid">
+            {quickLinks.map((link) => (
+              <a href="#shop" key={link}>
+                {link}
+              </a>
+            ))}
+          </div>
+        </section>
       </main>
 
       <footer className="expedia-footer">

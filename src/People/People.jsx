@@ -70,10 +70,10 @@ const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
 const genuinPlacement = {
   ariaLabel: "People editor picks videos",
   containerId: "gen-sdk",
-  height: "600px",
+  height: "650px",
   placement_id: "69e84b85b7908587274a7e34",
   style_id: "69e84b85b7908587274a7e35",
-  width: "300px",
+  width: "100%",
 };
 
 function PeopleGenuinPlacement({ placement }) {

@@ -206,7 +206,6 @@
 .expedia-promo-band,
 .expedia-section,
 .expedia-sdk-section,
-.expedia-rail-layout,
 .expedia-links-section,
 .expedia-footer {
   width: min(1180px, calc(100% - 36px));
@@ -334,14 +333,6 @@
   max-width: 100%;
 }
 
-.expedia-genuin-placement--wide {
-  width: 900px;
-}
-
-.expedia-genuin-placement--rail {
-  width: 200px;
-}
-
 .expedia-genuin-placement .gen-sdk-class {
   display: block;
   max-width: 100%;
@@ -349,29 +340,36 @@
   border-radius: 14px;
 }
 
-.expedia-rail-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px;
-  gap: 28px;
-  align-items: start;
-}
-
-.expedia-rail-main {
-  min-width: 0;
-}
-
-.expedia-rail-layout .expedia-section,
-.expedia-rail-layout .expedia-links-section {
+.expedia-genuin-placement--wide {
   width: 100%;
+}
+
+.expedia-genuin-placement--wide .gen-sdk-class {
+  width: 100% !important;
+  height: 325px !important;
+}
+
+.expedia-destination-card--sdk {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  min-height: 447px;
+  padding: 16px;
+}
+
+.expedia-destination-card--sdk h3 {
   margin: 0;
 }
 
-.expedia-rail-aside {
-  position: sticky;
-  top: 88px;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: clamp(42px, 6vw, 76px);
+.expedia-genuin-placement--destination {
+  width: 100%;
+  min-width: 0;
+}
+
+.expedia-genuin-placement--destination .gen-sdk-class {
+  width: 100% !important;
+  height: 380px !important;
+  border-radius: 10px;
 }
 
 .expedia-package-card a {
@@ -442,15 +440,8 @@
 
   .expedia-field-grid,
   .expedia-destination-grid,
-  .expedia-package-grid,
-  .expedia-rail-layout {
+  .expedia-package-grid {
     grid-template-columns: 1fr;
-  }
-
-  .expedia-rail-aside {
-    position: static;
-    justify-content: center;
-    padding-top: clamp(42px, 6vw, 76px);
   }
 
   .expedia-link-grid,

@@ -65,14 +65,14 @@ const accessoryCards = [
   "Owner resources",
 ];
 
-const genuinApiKey = "5bb7d302c337f2037072da4390ad373019d68ae1d46627e1";
+const genuinApiKey = "2ad9a23113eb3fe4108d071988325a48b5bd5b90df04678d";
 
 const genuinPlacement = {
   ariaLabel: "Yamaha featured videos",
   containerId: "gen-sdk-yamaha-products",
   height: "620px",
-  placement_id: "69e833d94f981f9247b558cb",
-  style_id: "69e833d94f981f9247b558cc",
+  placement_id: "69e8c634c389e59d070ae8a8",
+  style_id: "69e8c634c389e59d070ae8a9",
   width: "460px",
 };
 

@@ -233,10 +233,12 @@
   justify-content: center;
   border-top: 1px solid #d8dde8;
   padding-top: 18px;
+  width: 100%;
 }
 
 .people-genuin-section .gen-sdk-class {
   display: block;
+  width: 100% !important;
   max-width: 100%;
   overflow: hidden;
 }
@@ -325,6 +327,10 @@
   .people-shopping {
     position: static;
   }
+
+  .people-genuin-section .gen-sdk-class {
+    height: 580px !important;
+  }
 }
 
 @media (max-width: 680px) {
@@ -353,5 +359,9 @@
 
   .people-feature-list h3 {
     font-size: 1.3rem;
+  }
+
+  .people-genuin-section .gen-sdk-class {
+    height: 520px !important;
   }
 }
